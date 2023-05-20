@@ -1,0 +1,174 @@
+<!--header section starts-->
+<header class="header">
+  <a href="#" class="logo"><i class="fas fa-heartbeat"></i> Sri Sai Homeopathic Clinic <br>
+    <p style="color:red;">Dr.Keerthi Ranga</p> B.H.M.S, M.D(Homeo)
+  </a>
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#about">Doctor</a>
+    <a href="#book">Book</a>
+    <a href="#review">Review</a>
+  </nav>
+
+  <div id="menu-btn" class="fas fa-bars"></div>
+</header>
+<!--header section ends-->
+<!-- home section starts -->
+<section class="home" id="home">
+  <div class="image">
+    <img src="../assets/image/home-img.svg" alt="">
+  </div>
+  <div class="content">
+    <h3>stay safe,stay healthy</h3>
+    <p>HealthCare Center</p>
+    <a href="#" class="btn">Contact Us<span class="fas fa-chevron-right"></span></a>
+  </div>
+
+</section>
+<!-- home section ends -->
+<!-- about section starts -->
+<section class="about" id="#about">
+  <h1 class="heading"><span>ABOUT</span> US</h1>
+  <div class="row">
+    <div class="image">
+      <img src="../assets/image/about-img.svg" alt="">
+    </div>
+    <div class="content">
+      <h3>We Take Care Of Your Healthy Life</h3>
+      <p>By Giving Proper Medication</p>
+      <p>By Suggesting The Healthy Diet</p>
+      <a href="#" class="btn">Learn More<span class="fas fa-chevron-right"></span></a>
+    </div>
+  </div>
+</section>
+<!-- about section ends -->
+<!-- Doctor section starts -->
+<section class="doctors" id="doctors">
+
+  <h1 class="heading"> our <span>doctors</span> </h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <img src="../assets/image/doc-1.jpg" alt="">
+      <h3>Keerthi Ranga</h3>
+      <span>expert doctor</span>
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- Doctor section ends -->
+<!--booking section starts-->
+<section class="book" id="book">
+  <h1 class="heading"> <span>BOOK</span> NOW </h1>
+  <div class="row">
+    <div class="image">
+      <img src="../assets/image/book-img.svg" alt="">
+    </div>
+    <form [formGroup]="userForm" (ngSubmit)="register()">
+      <h3>Book Appointment</h3>
+      <input formControlName="name" type="text" placeholder="Enter Your Name" class="box">
+      <ng-container
+        *ngIf="userForm.get('name')?.invalid && (userForm.get('name')?.dirty || userForm.get('name')?.touched)">
+        <small style="color:red; text-align: left;" *ngIf="userForm.get('name')?.errors?.['required']">Required
+          Input</small>
+      </ng-container>
+      <input type="text" formControlName="mobile" placeholder="Enter Your Number" class="box">
+      <ng-container
+        *ngIf="userForm.get('mobile')?.invalid && (userForm.get('mobile')?.dirty || userForm.get('mobile')?.touched)">
+        <small style="color:red; text-align: left;" *ngIf="userForm.get('mobile')?.errors?.['required']">Required
+          Input</small>
+      </ng-container>
+      <input type="email" formControlName="email" placeholder="Enter Your Email" class="box">
+      <ng-container
+        *ngIf="userForm.get('email')?.invalid && (userForm.get('email')?.dirty || userForm.get('email')?.touched)">
+        <small style="color:red; text-align: left;" *ngIf="userForm.get('email')?.errors?.['required']">Required
+          Input</small>
+        <small style="color:red; text-align: left;" *ngIf="userForm.get('email')?.errors?.['email']">Not valid
+          email</small>
+      </ng-container>
+      <input type="date" class="box" formControlName="dob">
+      <ng-container
+        *ngIf="userForm.get('dob')?.invalid && (userForm.get('dob')?.dirty || userForm.get('dob')?.touched)">
+        <small style="color:red; text-align: left;" *ngIf="userForm.get('dob')?.errors?.['required']">Required
+          Input</small>
+      </ng-container> <br>
+      <input type="submit" value="book now" class="btn">
+    </form>
+  </div>
+</section>
+<!--booking section ends-->
+
+<!--review section starts-->
+<section class="review" id="review">
+
+  <h1 class="heading"> client's <span>review</span> </h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <img src="../assets/image/pic-1.jpg" alt="">
+      <h3>Sri Priya</h3>
+      <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+      </div>
+      <p class="text">Consulted Dr.Keerthi(Homoeopath) for Allergic RhinitisCough Treatment <br>
+        Happy with: Doctor friendlinessExplanation of the health issueTreatment satisfactionValue for
+        moneyWait time <br>
+        Visited for my son has been suffering from Allergic Rhinitis and cough for last 5 years. After
+        having started medication, his health is under little control now. Strongly hope he will be
+        completely recovered as I continue medication.I sincerely appreciate doctor for her friendliness,
+        diagnosis, patience and availability for help. Many Thanks.!</p>
+    </div>
+
+    <div class="box">
+      <img src="../assets/image/pic-2.jpg" alt="">
+      <h3>Namratha</h3>
+      <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+      </div>
+      <p class="text">
+        Happy with: Doctor friendlinessExplanation of the health issueTreatment satisfaction Value for
+        moneyWait time <br>
+        Dr.Keerthi is a very professional and friendly doctor. Her explanation of health issue is very good.
+        I have been to her many times and it has been a very good experience.
+        Recommend her for all sorts of homeopathic treatment.!</p>
+    </div>
+
+    <div class="box">
+      <img src="../assets/image/pic-3.png" alt="">
+      <h3>Arjun</h3>
+      <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+      </div>
+      <p class="text">Visited For Gastrointestinal Problems <br>
+        Happy with: Doctor friendlinessExplanation of the health issueTreatment satisfaction <br>
+        Visited for extreme headaches and gastric problems.... the doctor was very patient and explained
+        everything properly. I noticed effective improvement in my health after I started taking the
+        medicines prescribed.!</p>
+    </div>
+
+  </div>
+
+</section>
